@@ -1,0 +1,11 @@
+body 			{ padding-top:50px; }
+.jumbotron, .btn { color: white; background-color: #74AFAD; border-color: #74AFAD}
+
+.navbar { background-color: white; border-color: white }
+
+.container .footerWrap { color: #74AFAD}
+
+.blocks-hieght {
+   min-height:100px;
+}
+
