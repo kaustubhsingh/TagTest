@@ -4,6 +4,7 @@
   "description": "",
   "main": "tagtest.js",
   "scripts": {
+	"start": "node tagtest.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
