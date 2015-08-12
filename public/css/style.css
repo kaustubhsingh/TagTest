@@ -1,5 +1,5 @@
 body 			{ padding-top:50px; }
-.jumbotron { color: white;
+.jumbotron, .btn { color: white;
 			 background-color: #74AFAD;
 			 border-color: #74AFAD;
 		   } 
@@ -7,9 +7,9 @@ body 			{ padding-top:50px; }
 .jumbotron h1 {   font-weight: bold; font-size: 1000%;}
 .jumbotron h3 {   font-size: 300%;}
 
-.btn { color: white; background-color: #74AFAD; border-color: #74AFAD}
+.navbar { background-color: #74AFAD; border-color: #74AFAD; color: white;}
 
-.navbar { background-color: white; border-color: white }
+
 
 .container .footerWrap { color: #74AFAD}
 
@@ -17,3 +17,4 @@ body 			{ padding-top:50px; }
    min-height:100px;
 }
 
+.btn { background-color: #D9853B; border-color: #D9853B }
