@@ -1,5 +1,10 @@
 body 			{ padding-top:50px; }
-.jumbotron, .btn { color: white; background-color: #74AFAD; border-color: #74AFAD}
+.jumbotron { color: white;
+			 background-color: #74AFAD;
+			 border-color: #74AFAD;
+		   } 
+
+.btn { color: white; background-color: #74AFAD; border-color: #74AFAD}
 
 .navbar { background-color: white; border-color: white }
 
