@@ -18,6 +18,11 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
+app.get('/processinput', function(req, res) {
+
+	res.send(req.query['landingpages'] + req.query['keywords']);
+	
+});
 
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
