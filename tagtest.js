@@ -18,9 +18,9 @@ app.get('/', function(req, res) {
 	res.render('pages/index');
 });
 
-app.get('/processinput', function(req, res) {
+app.get('/report', function(req, res) {
 
-	res.send(req.query['landingpages'] + req.query['keywords']);
+	res.render('pages/report', { landingpages: req.query['landingpages'], keywords: req.query['keywords']} );
 	
 });
 
