@@ -18,8 +18,18 @@ function generate_report(landing_pages, keywords, res)
                                     return console.log('Invalid Status Code Returned:', response.statusCode);
                                 }
                             
-                                console.log(body); 
-                                res.render('pages/report', { landingpages: body, keywords: " "} );
+                                //console.log(body);
+                                
+                                var report = "";
+                                if (body.indexOf(keywords) > -1) {
+                                    report = landing_pages + " : Tag found";
+                                }
+                                else
+                                {
+                                    report = landing_pages + " : Tag not found"; 
+                                }
+                                
+                                res.render('pages/report', { landingpages: report, keywords: " "} );
                               });
     
 }
