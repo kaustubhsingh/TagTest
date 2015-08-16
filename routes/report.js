@@ -1,9 +1,9 @@
 
 
 
-function generate_report()
+function generate_report(landing_pages, keywords)
 {
-    
+    return landing_pages + " " + keywords;
     
 }
-export.report = generate_report;
+exports.report = generate_report;

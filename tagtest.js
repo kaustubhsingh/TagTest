@@ -19,8 +19,10 @@ app.get('/', function(req, res) {
 });
 
 app.get('/report', function(req, res) {
-
-	res.render('pages/report', { landingpages: req.query['landingpages'], keywords: req.query['keywords']} );
+	
+	var report = require('./routes/report');
+	var result = report.report(req.query['landingpages'], req.query['keywords']);
+	res.render('pages/report', { landingpages: result, keywords: result} );
 	
 });
 
