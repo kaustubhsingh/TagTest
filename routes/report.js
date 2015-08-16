@@ -19,7 +19,7 @@ function generate_report(landing_pages, keywords, res)
                                 }
                             
                                 console.log(body); 
-                                res.render('pages/report', { landingpages: body, keywords: body} );
+                                res.render('pages/report', { landingpages: body, keywords: " "} );
                               });
     
 }
