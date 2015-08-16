@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "express": "~4.13.3",
-    "ejs": "~1.0.0"
+    "ejs": "~1.0.0",
+	"request": "2.60.0"
   }
 }

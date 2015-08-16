@@ -21,9 +21,7 @@ app.get('/', function(req, res) {
 app.get('/report', function(req, res) {
 	
 	var report = require('./routes/report');
-	var result = report.report(req.query['landingpages'], req.query['keywords']);
-	res.render('pages/report', { landingpages: result, keywords: result} );
-	
+	var result = report.report(req.query['landingpages'], req.query['keywords'], res);
 });
 
 app.listen(port, function() {
