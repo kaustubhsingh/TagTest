@@ -12,9 +12,11 @@ function generate_report(landing_pages, keywords, res)
     // console.log("xxxx" + landing_pages);
     // console.log(landing_pages.length)
  
-    var report = new Array(landing_pages.length), count = 0;
+    var report = new Array(landing_pages.length), count = 0; 
     
-        
+    console.log(landing_pages.length);
+    console.log(report.length);
+     
     var download = function(count){
         
         request(landing_pages[count],
@@ -32,15 +34,16 @@ function generate_report(landing_pages, keywords, res)
                 
                     //console.log(body);
                     
-                    count++;
+                    
                     if (body.indexOf(keywords) > -1) {
-                        report[count] = (landing_pages[count] + " : Tag found\n"); console.log( " Tag found\n");
+                        report[count] = "Yes";
                     }
                     else
                     {
-                        report[count] = (landing_pages[count] + " : Tag not found\n"); console.log(report[count]);
+                        report[count] = "No";
                     }
                     
+                    count++;
                     console.log(count);
                     if (count < landing_pages.length){
                         console.log("case a")
@@ -49,7 +52,7 @@ function generate_report(landing_pages, keywords, res)
                     else
                     {
                         console.log("case b");
-                        res.render('pages/report', { landingpages: report, keywords: " "} );   
+                        res.render('pages/report', { landingpages: landing_pages, report: report} );   
                     }
           
                     
