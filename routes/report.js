@@ -24,7 +24,10 @@ function generate_report(landing_pages, keywords, res)
                     //Check for error
                     if(error){
                         res.render('pages/report', { landingpages: error, keywords: error} );
-                        return console.log('Error:', error);
+                        console.log('Error:', error);
+                        report[count] = "Couldn't download the page. Try manual inspection.";
+                        count++;
+                        continue;
                     }
                 
                     //Check for right status code
