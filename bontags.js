@@ -9,6 +9,8 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/public'));
 
+app.use('/favicon.ico', express.static('images/favicon.ico'));
+
 app.get('/', function(req, res) {
 
 	// ejs render automatically looks in the views folder
