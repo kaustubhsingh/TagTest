@@ -38,9 +38,8 @@ function generate_report(landing_pages, keywords, res)
                         }
                     }
                 
-                    count++;
-                    
                     console.log(count); console.log(landing_pages[count]);
+                    count++;                  
                     
                     if (count < landing_pages.length){                       
                         download(count, 1); 
