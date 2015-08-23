@@ -19,51 +19,39 @@
         </div>
     
         <br><br><br><br>
-    
+     
         <div>	
             <div id="contacts">
                 <div class="row">	     
                     <div class="col-sm-offset-2 col-sm-8">
                     
-                        <form name="sentMessage" id="contactForm"  novalidate>
-                            <div class="control-group">
-                                        <div class="controls">
-                                             <input type="text" class="form-control" 
-                                                    placeholder="Full Name" id="name" required
-                                                        data-validation-required-message="Please enter your name" />
-                                     
-                                        </div>
+                        <form name="contactform" id="contactform" action="/emailsubmitted" >
+                            <div>
+                                <input type="text" class="form-control" 
+                                                    placeholder="Full Name" id="name" required />
                             </div> 	<br>
-                            <div class="control-group">
-                                <div class="controls">
-                                    <input type="email" class="form-control" placeholder="Email" 
-                                             id="email" required
-                                        data-validation-required-message="Please enter your email" />
-                                </div>
+                            <div>
+                                <input type="email" class="form-control" placeholder="Email" 
+                                             id="email" required />
                             </div> 	<br>
                               
-                            <div class="control-group">
-                                <div class="controls">
-                                    <textarea rows="10" cols="100" class="form-control" 
+                            <div>
+                                <textarea rows="10" cols="100" class="form-control" 
                                            placeholder="Message" id="message" required
-                                   data-validation-required-message="Please enter your message" minlength="5" 
-                                           data-validation-minlength-message="Min 5 characters" 
-                                            maxlength="999" style="resize:none"></textarea>
-                                </div>
+                                              style="resize:none"></textarea>
                             </div> <br>
-                             
-                            <div id="success"> </div>
-                            <button type="submit" class="btn btn-primary btn-block">Send</button><br />
+
+                            <button type="submit" id = "submit" class="btn btn-primary btn-block">Send</button><br />
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    
+        
         <br><br>
         <footer>
             <% include ../partials/footer %>
         </footer>
-	
+
     </body>
 </html>

@@ -27,6 +27,12 @@ app.get('/contact', function(req, res) {
 	res.render('pages/contact');
 });
 
+app.get('/emailsubmitted', function(req, res) {
+
+	// ejs render automatically looks in the views folder
+	res.render('pages/emailsubmitted');
+});
+
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });
