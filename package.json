@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaustubhsingh/TagTest.git"
+    "url": "https://github.com/kaustubhsingh/bontags.git"
   },
   "author": "",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/kaustubhsingh/TagTest/issues"
+    "url": "https://github.com/kaustubhsingh/bontags/issues"
   },
   "dependencies": {
     "express": "~4.13.3",
