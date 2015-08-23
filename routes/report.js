@@ -6,11 +6,8 @@ async = require("async");
 function generate_report(landing_pages, keywords, res)
 {
     var request = require('request');
- 
-    // console.log("xxxx" + landing_pages);   
+   
     landing_pages = landing_pages.replace( /\n/g, " " ).split(" ");
-    // console.log("xxxx" + landing_pages);
-    // console.log(landing_pages.length)
  
     var report = new Array(landing_pages.length), count = 0; 
     
@@ -21,7 +18,7 @@ function generate_report(landing_pages, keywords, res)
         
         request(landing_pages[count],
                 function (error, response, body) {
-                    //Check for error
+                   
                     if(error || (response.statusCode !== 200)){
                         // res.render('pages/report', { landingpages: error, keywords: error} );
                         console.log('Error:', error);
@@ -38,7 +35,7 @@ function generate_report(landing_pages, keywords, res)
                         }
                     }
                 
-                    console.log(count); console.log(landing_pages[count]);
+                    // console.log(count); console.log(landing_pages[count]);
                     count++;                  
                     
                     if (count < landing_pages.length){                       
