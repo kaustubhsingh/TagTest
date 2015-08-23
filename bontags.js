@@ -9,7 +9,8 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/public'));
 
-app.use('/favicon.ico', express.static('images/favicon.ico'));
+var favicon = require('serve-favicon');
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 app.get('/', function(req, res) {
 

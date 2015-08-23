@@ -1,6 +1,6 @@
 {
   "name": "bontags",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "bontags.js",
   "scripts": {
@@ -20,6 +20,6 @@
     "express": "~4.13.3",
     "ejs": "~1.0.0",
 	"request": "2.60.0",
-	"async": "1.4.2"
+	"serve-favicon": "2.3.0"
   }
 }
