@@ -1,8 +1,4 @@
 
-
-async = require("async");
-
-
 function generate_report(landing_pages, keywords, res)
 {
     var request = require('request');
