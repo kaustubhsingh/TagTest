@@ -39,14 +39,14 @@ function generate_report(landing_pages, keywords, res)
                     }
                 
                     count++;
-                    console.log(count);
-                    if (count < landing_pages.length){
-                        // console.log("case a")
+                    
+                    console.log(count); console.log(landing_pages[count]);
+                    
+                    if (count < landing_pages.length){                       
                         download(count, 1); 
                     }
                     else
                     {
-                        // console.log("case b");
                         res.render('pages/report', { landingpages: landing_pages, report: report} );   
                     }
       
