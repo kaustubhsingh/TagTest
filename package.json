@@ -1,8 +1,8 @@
 {
-  "name": "TagTest",
+  "name": "bontags",
   "version": "0.0.0",
   "description": "",
-  "main": "tagtest.js",
+  "main": "bontags.js",
   "scripts": {
 	"start": "node tagtest.js",
     "test": "echo \"Error: no test specified\" && exit 1"
