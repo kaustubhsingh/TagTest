@@ -24,15 +24,18 @@ app.get('/report', function(req, res) {
 	var result = report.report(req.query['landingpages'], req.query['keywords'], res);
 });
 
+app.get('/help', function(req, res) {
+
+	res.render('pages/help');
+});
+
 app.get('/contact', function(req, res) {
 
-	// ejs render automatically looks in the views folder
 	res.render('pages/contact');
 });
 
 app.get('/emailsubmitted', function(req, res) {
 
-	// ejs render automatically looks in the views folder
 	res.render('pages/emailsubmitted');
 });
 
