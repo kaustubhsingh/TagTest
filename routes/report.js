@@ -5,19 +5,21 @@ function generate_report(landing_pages, keywords, res)
    
     landing_pages = landing_pages.replace( /\n/g, " " ).split(" ");
  
-    var report = new Array(landing_pages.length), count = 0; 
+    var report = new Array(landing_pages.length), count = 0, downloadCount = 0; 
     
-    console.log(landing_pages.length);
-    console.log(report.length);
+    // console.log(landing_pages.length);
+    // console.log(report.length);
      
     var download = function(count){
         
         request(landing_pages[count],
                 function (error, response, body) {
-                   
+        
+                    ++downloadCount;
+                    
                     if(error || (response.statusCode !== 200)){
-                        // res.render('pages/report', { landingpages: error, keywords: error} );
-                        console.log('Error:', error);
+                      
+                        // console.log('Error:', error);
                         report[count] = "Couldn't download the page.";
                     }
                     else{                    
@@ -30,24 +32,21 @@ function generate_report(landing_pages, keywords, res)
                             report[count] = "No";
                         }
                     }
-                
-                    // console.log(count); console.log(landing_pages[count]);
-                    count++;                  
-                    
-                    if (count < landing_pages.length){                       
-                        download(count, 1); 
-                    }
-                    else
+                       
+                    if (downloadCount == landing_pages.length)
                     {
                         res.render('pages/report', { landingpages: landing_pages, report: report} );   
                     }
-      
                     
                   });
         
     }       
 
-    download(0);    
-
+    for (var i = 0; i < landing_pages.length; ++i)
+    {
+        download(i); 
+    }
+      
+        
 }
 exports.report = generate_report;
