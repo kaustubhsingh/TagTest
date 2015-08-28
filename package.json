@@ -1,7 +1,7 @@
 {
   "name": "bontags",
   "version": "1.0.0",
-  "description": "",
+  "description": "validate ad tech tags easily",
   "main": "bontags.js",
   "scripts": {
 	"start": "node bontags.js",
@@ -20,6 +20,7 @@
     "express": "~4.13.3",
     "ejs": "~1.0.0",
 	"request": "2.60.0",
-	"serve-favicon": "2.3.0"
+	"serve-favicon": "2.3.0",
+	"body-parser": "1:13:3"
   }
 }

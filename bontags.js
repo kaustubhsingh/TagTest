@@ -12,16 +12,22 @@ app.use(express.static(__dirname + '/public'));
 var favicon = require('serve-favicon');
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
+
 app.get('/', function(req, res) {
 
 	// ejs render automatically looks in the views folder
 	res.render('pages/index');
 });
 
-app.get('/report', function(req, res) {
+app.post('/report', function(req, res) {
 	
 	var report = require('./routes/report');
-	var result = report.report(req.query['landingpages'], req.query['keywords'], res);
+	var result = report.report(req.body['landingpages'], req.body['keywords'], res);
 });
 
 app.get('/help', function(req, res) {
