@@ -1,21 +1,10 @@
-body 			{ padding-top:50px; }
 .jumbotron, .btn { color: white;
 			 background-color: #74AFAD;
 			 border-color: #74AFAD;
 		   } 
 		   
-.jumbotron h1 {   font-weight: bold; font-size: 1000%;}
-.jumbotron h3 {   font-size: 300%;}
-
 .navbar { background-color: #74AFAD; border-color: #74AFAD; color: white;}
 
-
-
 .container .footerWrap { color: #74AFAD}
-
-.blocks-hieght {
-   min-height:100px;
-}
-
 
 .btn { background-color: #D9853B; border-color: #D9853B }
