@@ -5,4 +5,9 @@
 		   
 .navbar { background-color: #558C89; border-color: #558C89; color: white;}
 
+.navbar-nav > li > a:hover {
+    background-color: #74AFAD;
+	border-color: #74AFAD;
+}
+
 .btn { background-color: #558C89; border-color: #558C89 }
